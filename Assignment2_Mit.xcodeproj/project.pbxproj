@@ -15,6 +15,8 @@
 		4A7E43F72727252B0085C332 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A7E43F52727252B0085C332 /* LaunchScreen.storyboard */; };
 		4A7E44022727252B0085C332 /* Assignment2_MitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A7E44012727252B0085C332 /* Assignment2_MitTests.swift */; };
 		4A7E440D2727252B0085C332 /* Assignment2_MitUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A7E440C2727252B0085C332 /* Assignment2_MitUITests.swift */; };
+		4A8A787027274AA10057C207 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A8A786F27274AA10057C207 /* Item.swift */; };
+		4A8A787827274CFC0057C207 /* Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A8A787727274CFC0057C207 /* Manager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		4A7E44082727252B0085C332 /* Assignment2_MitUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Assignment2_MitUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A7E440C2727252B0085C332 /* Assignment2_MitUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assignment2_MitUITests.swift; sourceTree = "<group>"; };
 		4A7E440E2727252B0085C332 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4A8A786F27274AA10057C207 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		4A8A787727274CFC0057C207 /* Manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Manager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +103,7 @@
 		4A7E43E92727251E0085C332 /* Assignment2_Mit */ = {
 			isa = PBXGroup;
 			children = (
+				4A8A786E27274A6E0057C207 /* Model */,
 				4A7E43EA2727251E0085C332 /* AppDelegate.swift */,
 				4A7E43EC2727251E0085C332 /* SceneDelegate.swift */,
 				4A7E43EE2727251E0085C332 /* ViewController.swift */,
@@ -126,6 +131,15 @@
 				4A7E440E2727252B0085C332 /* Info.plist */,
 			);
 			path = Assignment2_MitUITests;
+			sourceTree = "<group>";
+		};
+		4A8A786E27274A6E0057C207 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4A8A786F27274AA10057C207 /* Item.swift */,
+				4A8A787727274CFC0057C207 /* Manager.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,9 +272,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A8A787027274AA10057C207 /* Item.swift in Sources */,
 				4A7E43EF2727251E0085C332 /* ViewController.swift in Sources */,
 				4A7E43EB2727251E0085C332 /* AppDelegate.swift in Sources */,
 				4A7E43ED2727251E0085C332 /* SceneDelegate.swift in Sources */,
+				4A8A787827274CFC0057C207 /* Manager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
