@@ -43,6 +43,17 @@ class ViewController: UIViewController,
                       UITableViewDelegate,
                       UITableViewDataSource {
     
+    @IBOutlet weak var itemTable: UITableView!
+    
+    
+    @IBOutlet weak var quantityLabel: UILabel!
+    
+    @IBOutlet weak var typeLabel: UILabel!
+    
+    @IBOutlet weak var totalLabel: UILabel!
+    
+    var runnngNumber = ""
+    var tempPrice = 0
     
     var lists = [["Pants",20,25],
                  ["Shoes",50,35],
@@ -61,24 +72,33 @@ class ViewController: UIViewController,
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
-    
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = itemTable.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        
-//         let rowData = items[indexPath.row]
-//            if let firstStr = rowData.first as? String {
-//                cell.textLabel?.text = firstStr
-//                cell.detailTextLabel?.text = rowData[1]
-//            }
-        
+
         cell.textLabel?.text = manager.getAllItems()[indexPath.row].name
         cell.detailTextLabel?.text = "\(manager.getAllItems()[indexPath.row].quantity)"
-        
+
         return cell
     }
     
-
-    @IBOutlet weak var itemTable: UITableView!
+     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        if !manager.getAllItems().isEmpty {
+            quantityLabel.text = ""
+            runnngNumber = ""
+            typeLabel.text = manager.getAllItems()[indexPath.row].name
+            tempPrice = manager.getAllItems()[indexPath.row].price
+         }
+    }
+    
+    @IBAction func numberPressed(_ sender: UIButton) {
+        runnngNumber += "\(sender.tag)"
+        quantityLabel.text = runnngNumber
+        var price =  "\(Int(runnngNumber) ?? 0 * Int(tempPrice))"
+        totalLabel.text = price
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -90,11 +110,7 @@ class ViewController: UIViewController,
             let price = list[2]
             let i: Item = Item(n: name as! String, q: quantity as! Int, p: price as! Int)
             manager.addNewItem(newItem: i)
-            
+            itemTable.reloadData()
         }
-        
     }
-    
-    
 }
-
