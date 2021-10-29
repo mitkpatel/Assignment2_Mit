@@ -54,6 +54,8 @@ class ViewController: UIViewController,
     
     var runnngNumber = ""
     var tempPrice = 0
+    var tempQuantity = 0
+    var currentIndex = 0
     
     var lists = [["Pants",20,25],
                  ["Shoes",50,35],
@@ -87,18 +89,44 @@ class ViewController: UIViewController,
         if !manager.getAllItems().isEmpty {
             quantityLabel.text = ""
             runnngNumber = ""
+            totalLabel.text = ""
             typeLabel.text = manager.getAllItems()[indexPath.row].name
             tempPrice = manager.getAllItems()[indexPath.row].price
+            tempQuantity = manager.getAllItems()[indexPath.row].quantity
+            currentIndex = indexPath.row
          }
     }
     
     @IBAction func numberPressed(_ sender: UIButton) {
         runnngNumber += "\(sender.tag)"
         quantityLabel.text = runnngNumber
-        var price =  "\(Int(runnngNumber) ?? 0 * Int(tempPrice))"
-        totalLabel.text = price
+        totalLabel.text =  "\(Int(runnngNumber)! * Int(tempPrice))"
     }
     
+    
+    @IBAction func buyPressed(_ sender: Any) {
+        
+        if Int(runnngNumber) ?? 0 > Int(tempQuantity) {
+            let alert = UIAlertController(title: "Problem with the order!", message: "We have only \(tempQuantity) \(typeLabel.text!) in stock.", preferredStyle: .alert)
+
+            alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+            self.present(alert, animated: true)
+        }
+        
+        else {
+            let alert = UIAlertController(title: "Are youu sure?", message: "Total cost for \(tempQuantity) \(typeLabel.text!) is $\(totalLabel.text!)", preferredStyle: .alert)
+
+            alert.addAction(UIAlertAction(title: "Confirm", style: .default, handler: { [self]_ in
+                let temp = (manager.getAllItems()[currentIndex].quantity) - Int(runnngNumber)!
+                manager.getAllItems()[currentIndex].quantity = temp
+                itemTable.reloadData()
+            }))
+            alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: {_ in self.itemTable.reloadData()}))
+
+            self.present(alert, animated: true)
+
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
