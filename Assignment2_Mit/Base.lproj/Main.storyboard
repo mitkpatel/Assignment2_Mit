@@ -461,18 +461,44 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="1PQ-oF-gqB" kind="show" id="xSA-eJ-vX5"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="dmE-i1-hX6" id="CD1-mL-5AP"/>
+                                    <outlet property="delegate" destination="dmE-i1-hX6" id="eRt-vn-cyC"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="RtV-61-lPi"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="Utg-s4-Iez"/>
+                    <connections>
+                        <outlet property="itemTable" destination="CtX-1u-W7e" id="sfP-Su-X38"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cdq-lF-iaF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2644.9275362318845" y="-1.3392857142857142"/>
+        </scene>
+        <!--History Details View Controller-->
+        <scene sceneID="cWg-L9-QsZ">
+            <objects>
+                <viewController id="1PQ-oF-gqB" customClass="HistoryDetailsViewController" customModule="Assignment2_Mit" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="38X-uT-s2O">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="btz-Os-Un7"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="LkC-z2-8Wn"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rer-XN-bm5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2610" y="759"/>
         </scene>
         <!--Restock View Controller-->
         <scene sceneID="L7l-J9-3lz">

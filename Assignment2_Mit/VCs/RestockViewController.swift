@@ -18,27 +18,24 @@ class RestockViewController: UIViewController,UITableViewDelegate,
     
    
     @IBAction func restockPressed(_ sender: UIButton) {
-        restockManager.getAllItems()[currentIndex].quantity = Int(newQuantity.text!)!
-        itemTable.reloadData()
+        if newQuantity.text == "" {
+            let alert = UIAlertController(title: "Error!", message: "You have to select an item and provide a new quantity", preferredStyle: .alert)
+
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            self.present(alert, animated: true)
+            newQuantity.text = ""
+            
+        } else {
+            restockManager.getAllItems()[currentIndex].quantity = Int(newQuantity.text!)!
+            itemTable.reloadData()
+        }
     }
     
     @IBAction func cancelClicked(_ sender: Any) {
         newQuantity.text = ""
         itemTable.reloadData()
     }
-    
-    func textFieldDidBeginEditing(_ textField: UITextField) {
-        if textField == newQuantity {
-            print("hello")
-            if currentIndex != 0 {
-                let alert = UIAlertController(title: "Error!", message: "You have to select an item and provide a new quantity", preferredStyle: .alert)
 
-                alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-                self.present(alert, animated: true)
-            }
-        }
-    }
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 
         return restockManager.getAllItems().count  }

@@ -1,5 +1,5 @@
 //
-//  HistoryItemViewController.swift
+//  HistoryDetailsViewController.swift
 //  Assignment2_Mit
 //
 //  Created by user202387 on 10/29/21.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class HistoryItemViewController: UIViewController {
+class HistoryDetailsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

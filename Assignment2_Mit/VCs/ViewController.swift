@@ -87,9 +87,10 @@ class ViewController: UIViewController,
 
             alert.addAction(UIAlertAction(title: "Confirm", style: .default, handler: { [self]_ in
                 let temp = (manager.getAllItems()[currentIndex].quantity) - Int(runnngNumber)!
+                manager.addNewHistory(newHistory: History(n: "aa", q: 12, da: "sds", to: 22))
                 manager.getAllItems()[currentIndex].quantity = temp
                 //Date d = Date();
-                manager.addNewHistory(newHistory: History(n: typeLabel.text!, q: Int(quantityLabel.text!)!, da: "sds", to: Int(totalLabel.text!)!))
+                
                 itemTable.reloadData()
             }))
             alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: {_ in self.itemTable.reloadData()}))

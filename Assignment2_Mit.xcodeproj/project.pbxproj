@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4A28BF81272C9A990062147A /* History.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A28BF80272C9A990062147A /* History.swift */; };
+		4A28BF86272C9E960062147A /* HistoryDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A28BF85272C9E960062147A /* HistoryDetailsViewController.swift */; };
 		4A792900272C66530022179A /* myCustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A7928FE272C66530022179A /* myCustomButton.swift */; };
 		4A792901272C66530022179A /* myCustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A7928FF272C66530022179A /* myCustomTableViewCell.swift */; };
 		4A7E43EB2727251E0085C332 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A7E43EA2727251E0085C332 /* AppDelegate.swift */; };
@@ -44,6 +45,7 @@
 
 /* Begin PBXFileReference section */
 		4A28BF80272C9A990062147A /* History.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = History.swift; sourceTree = "<group>"; };
+		4A28BF85272C9E960062147A /* HistoryDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryDetailsViewController.swift; sourceTree = "<group>"; };
 		4A7928FE272C66530022179A /* myCustomButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = myCustomButton.swift; path = ../../../../../../Downloads/myCustomButton.swift; sourceTree = "<group>"; };
 		4A7928FF272C66530022179A /* myCustomTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = myCustomTableViewCell.swift; path = ../../../../../../Downloads/myCustomTableViewCell.swift; sourceTree = "<group>"; };
 		4A7E43E72727251E0085C332 /* Assignment2_Mit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Assignment2_Mit.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -92,6 +94,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4A28BF8A272C9ECE0062147A /* VCs */ = {
+			isa = PBXGroup;
+			children = (
+				4A7E43EE2727251E0085C332 /* ViewController.swift */,
+				4AE25A47272C7E8400CFCCAD /* ManagerViewController.swift */,
+				4AE25A4C272C868A00CFCCAD /* HistoryItemViewController.swift */,
+				4AE25A51272C87DA00CFCCAD /* RestockViewController.swift */,
+				4A28BF85272C9E960062147A /* HistoryDetailsViewController.swift */,
+			);
+			path = VCs;
+			sourceTree = "<group>";
+		};
 		4A7E43DE2727251E0085C332 = {
 			isa = PBXGroup;
 			children = (
@@ -118,16 +132,13 @@
 				4A8A786E27274A6E0057C207 /* Model */,
 				4A7E43EA2727251E0085C332 /* AppDelegate.swift */,
 				4A7E43EC2727251E0085C332 /* SceneDelegate.swift */,
-				4A7E43EE2727251E0085C332 /* ViewController.swift */,
+				4A28BF8A272C9ECE0062147A /* VCs */,
 				4A7E43F02727251E0085C332 /* Main.storyboard */,
 				4A7E43F32727252B0085C332 /* Assets.xcassets */,
 				4A7E43F52727252B0085C332 /* LaunchScreen.storyboard */,
 				4A7E43F82727252B0085C332 /* Info.plist */,
 				4A7928FE272C66530022179A /* myCustomButton.swift */,
 				4A7928FF272C66530022179A /* myCustomTableViewCell.swift */,
-				4AE25A47272C7E8400CFCCAD /* ManagerViewController.swift */,
-				4AE25A4C272C868A00CFCCAD /* HistoryItemViewController.swift */,
-				4AE25A51272C87DA00CFCCAD /* RestockViewController.swift */,
 			);
 			path = Assignment2_Mit;
 			sourceTree = "<group>";
@@ -298,6 +309,7 @@
 				4AE25A4D272C868A00CFCCAD /* HistoryItemViewController.swift in Sources */,
 				4A7E43EF2727251E0085C332 /* ViewController.swift in Sources */,
 				4A7E43EB2727251E0085C332 /* AppDelegate.swift in Sources */,
+				4A28BF86272C9E960062147A /* HistoryDetailsViewController.swift in Sources */,
 				4A7E43ED2727251E0085C332 /* SceneDelegate.swift in Sources */,
 				4AE25A52272C87DA00CFCCAD /* RestockViewController.swift in Sources */,
 				4A8A787827274CFC0057C207 /* Manager.swift in Sources */,
