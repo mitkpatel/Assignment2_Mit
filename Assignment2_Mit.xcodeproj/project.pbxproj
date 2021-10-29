@@ -19,6 +19,9 @@
 		4A7E440D2727252B0085C332 /* Assignment2_MitUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A7E440C2727252B0085C332 /* Assignment2_MitUITests.swift */; };
 		4A8A787027274AA10057C207 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A8A786F27274AA10057C207 /* Item.swift */; };
 		4A8A787827274CFC0057C207 /* Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A8A787727274CFC0057C207 /* Manager.swift */; };
+		4AE25A48272C7E8400CFCCAD /* ManagerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE25A47272C7E8400CFCCAD /* ManagerViewController.swift */; };
+		4AE25A4D272C868A00CFCCAD /* HistoryItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE25A4C272C868A00CFCCAD /* HistoryItemViewController.swift */; };
+		4AE25A52272C87DA00CFCCAD /* RestockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE25A51272C87DA00CFCCAD /* RestockViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +60,9 @@
 		4A7E440E2727252B0085C332 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4A8A786F27274AA10057C207 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		4A8A787727274CFC0057C207 /* Manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Manager.swift; sourceTree = "<group>"; };
+		4AE25A47272C7E8400CFCCAD /* ManagerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagerViewController.swift; sourceTree = "<group>"; };
+		4AE25A4C272C868A00CFCCAD /* HistoryItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryItemViewController.swift; sourceTree = "<group>"; };
+		4AE25A51272C87DA00CFCCAD /* RestockViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestockViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +123,9 @@
 				4A7E43F82727252B0085C332 /* Info.plist */,
 				4A7928FE272C66530022179A /* myCustomButton.swift */,
 				4A7928FF272C66530022179A /* myCustomTableViewCell.swift */,
+				4AE25A47272C7E8400CFCCAD /* ManagerViewController.swift */,
+				4AE25A4C272C868A00CFCCAD /* HistoryItemViewController.swift */,
+				4AE25A51272C87DA00CFCCAD /* RestockViewController.swift */,
 			);
 			path = Assignment2_Mit;
 			sourceTree = "<group>";
@@ -278,12 +287,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4AE25A48272C7E8400CFCCAD /* ManagerViewController.swift in Sources */,
 				4A792900272C66530022179A /* myCustomButton.swift in Sources */,
 				4A8A787027274AA10057C207 /* Item.swift in Sources */,
 				4A792901272C66530022179A /* myCustomTableViewCell.swift in Sources */,
+				4AE25A4D272C868A00CFCCAD /* HistoryItemViewController.swift in Sources */,
 				4A7E43EF2727251E0085C332 /* ViewController.swift in Sources */,
 				4A7E43EB2727251E0085C332 /* AppDelegate.swift in Sources */,
 				4A7E43ED2727251E0085C332 /* SceneDelegate.swift in Sources */,
+				4AE25A52272C87DA00CFCCAD /* RestockViewController.swift in Sources */,
 				4A8A787827274CFC0057C207 /* Manager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

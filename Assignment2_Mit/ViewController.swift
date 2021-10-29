@@ -110,4 +110,14 @@ class ViewController: UIViewController,
             itemTable.reloadData()
         }
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        itemTable.reloadData()
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let managerView = segue.destination as? ManagerViewController
+        managerView?.myManager = manager
+    }
 }
