@@ -291,8 +291,9 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="QuanLabel" destination="x2F-Nn-Y1h" id="mBc-PS-1fc"/>
-                                            <outlet property="nameLabel" destination="Q0h-3k-hpu" id="kLL-Za-LlH"/>
-                                            <outlet property="priceLabel" destination="IqC-bs-uPk" id="cd5-WW-Xgo"/>
+                                            <outlet property="nameLabel" destination="Q0h-3k-hpu" id="qLB-cr-J3C"/>
+                                            <outlet property="priceLabel" destination="IqC-bs-uPk" id="eLp-9M-o5G"/>
+                                            <outlet property="quanLabel" destination="x2F-Nn-Y1h" id="Wo1-yL-6Bi"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

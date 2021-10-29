@@ -47,7 +47,7 @@ class ViewController: UIViewController,
         let cell = itemTable.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! myCustomTableViewCell
 
         cell.nameLabel?.text = manager.getAllItems()[indexPath.row].name
-        cell.QuanLabel?.text = "\(manager.getAllItems()[indexPath.row].quantity)"
+        cell.quanLabel?.text = "\(manager.getAllItems()[indexPath.row].quantity)"
         cell.priceLabel?.text = "\(manager.getAllItems()[indexPath.row].price)"
 
         return cell
