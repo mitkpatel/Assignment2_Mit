@@ -17,6 +17,7 @@ class HistoryItemViewController: UIViewController,UITableViewDelegate,
 
         return historyItemManager.getAllHistory().count  }
     
+    
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }

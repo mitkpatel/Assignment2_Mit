@@ -31,6 +31,7 @@ class RestockViewController: UIViewController,UITableViewDelegate,
         }
     }
     
+    
     @IBAction func cancelClicked(_ sender: Any) {
         newQuantity.text = ""
         itemTable.reloadData()
