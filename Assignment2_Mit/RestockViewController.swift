@@ -8,12 +8,36 @@
 import UIKit
 
 class RestockViewController: UIViewController,UITableViewDelegate,
-                             UITableViewDataSource {
+                             UITableViewDataSource, UITextFieldDelegate {
 
     var currentIndex = 0
     var restockManager: Manager = Manager();
     
+    @IBOutlet weak var newQuantity: UITextField!
     @IBOutlet weak var itemTable: UITableView!
+    
+   
+    @IBAction func restockPressed(_ sender: UIButton) {
+        restockManager.getAllItems()[currentIndex].quantity = Int(newQuantity.text!)!
+        itemTable.reloadData()
+    }
+    
+    @IBAction func cancelClicked(_ sender: Any) {
+        newQuantity.text = ""
+        itemTable.reloadData()
+    }
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        if textField == newQuantity {
+            print("hello")
+            if currentIndex != 0 {
+                let alert = UIAlertController(title: "Error!", message: "You have to select an item and provide a new quantity", preferredStyle: .alert)
+
+                alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+                self.present(alert, animated: true)
+            }
+        }
+    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 
@@ -34,15 +58,25 @@ class RestockViewController: UIViewController,UITableViewDelegate,
     }
     
      func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if !restockManager.getAllItems().isEmpty {\
-            if 
-            currentIndex = indexPath.row
+        if !restockManager.getAllItems().isEmpty {
+            if newQuantity.text != "" {
+                currentIndex = indexPath.row
+            }
+            else {
+                let alert = UIAlertController(title: "Error!", message: "You have to select an item and provide a new quantity", preferredStyle: .alert)
+
+                alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+                self.present(alert, animated: true)
+                newQuantity.text = ""
+            }
          }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         itemTable.reloadData()
+        
+        //print("history \(restockManager.getAllHistory())")
         // Do any additional setup after loading the view.
     }
     

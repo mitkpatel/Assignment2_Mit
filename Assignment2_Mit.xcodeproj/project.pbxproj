@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4A28BF81272C9A990062147A /* History.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A28BF80272C9A990062147A /* History.swift */; };
 		4A792900272C66530022179A /* myCustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A7928FE272C66530022179A /* myCustomButton.swift */; };
 		4A792901272C66530022179A /* myCustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A7928FF272C66530022179A /* myCustomTableViewCell.swift */; };
 		4A7E43EB2727251E0085C332 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A7E43EA2727251E0085C332 /* AppDelegate.swift */; };
@@ -42,6 +43,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4A28BF80272C9A990062147A /* History.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = History.swift; sourceTree = "<group>"; };
 		4A7928FE272C66530022179A /* myCustomButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = myCustomButton.swift; path = ../../../../../../Downloads/myCustomButton.swift; sourceTree = "<group>"; };
 		4A7928FF272C66530022179A /* myCustomTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = myCustomTableViewCell.swift; path = ../../../../../../Downloads/myCustomTableViewCell.swift; sourceTree = "<group>"; };
 		4A7E43E72727251E0085C332 /* Assignment2_Mit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Assignment2_Mit.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -153,6 +155,7 @@
 			children = (
 				4A8A786F27274AA10057C207 /* Item.swift */,
 				4A8A787727274CFC0057C207 /* Manager.swift */,
+				4A28BF80272C9A990062147A /* History.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -290,6 +293,7 @@
 				4AE25A48272C7E8400CFCCAD /* ManagerViewController.swift in Sources */,
 				4A792900272C66530022179A /* myCustomButton.swift in Sources */,
 				4A8A787027274AA10057C207 /* Item.swift in Sources */,
+				4A28BF81272C9A990062147A /* History.swift in Sources */,
 				4A792901272C66530022179A /* myCustomTableViewCell.swift in Sources */,
 				4AE25A4D272C868A00CFCCAD /* HistoryItemViewController.swift in Sources */,
 				4A7E43EF2727251E0085C332 /* ViewController.swift in Sources */,

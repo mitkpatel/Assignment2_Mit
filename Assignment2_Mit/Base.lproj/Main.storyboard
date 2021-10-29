@@ -528,12 +528,18 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Restock"/>
+                                <connections>
+                                    <action selector="restockPressed:" destination="Lik-Zt-q0l" eventType="touchUpInside" id="2Ij-op-hHa"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pG3-iK-LsS">
                                 <rect key="frame" x="204" y="180" width="108" height="55"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <state key="normal" title="Cancel"/>
+                                <connections>
+                                    <action selector="cancelClicked:" destination="Lik-Zt-q0l" eventType="touchUpInside" id="Qpw-5v-dOf"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="qtL-Wm-uF7"/>
@@ -542,6 +548,7 @@
                     <navigationItem key="navigationItem" id="c0V-f7-7hD"/>
                     <connections>
                         <outlet property="itemTable" destination="w7X-I3-5V8" id="I2K-uv-meS"/>
+                        <outlet property="newQuantity" destination="z3Z-sc-fSi" id="wj2-v0-2RG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9ye-c1-4m9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
