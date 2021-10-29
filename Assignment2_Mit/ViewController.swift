@@ -7,50 +7,18 @@
 
 import UIKit
 
-@IBDesignable extension UIButton {
-
-    @IBInspectable var borderWidth: CGFloat {
-        set {
-            layer.borderWidth = newValue
-        }
-        get {
-            return layer.borderWidth
-        }
-    }
-
-    @IBInspectable var cornerRadius: CGFloat {
-        set {
-            layer.cornerRadius = newValue
-        }
-        get {
-            return layer.cornerRadius
-        }
-    }
-
-    @IBInspectable var borderColor: UIColor? {
-        set {
-            guard let uiColor = newValue else { return }
-            layer.borderColor = uiColor.cgColor
-        }
-        get {
-            guard let color = layer.borderColor else { return nil }
-            return UIColor(cgColor: color)
-        }
-    }
-}
-
 class ViewController: UIViewController,
                       UITableViewDelegate,
                       UITableViewDataSource {
     
     @IBOutlet weak var itemTable: UITableView!
     
-    
     @IBOutlet weak var quantityLabel: UILabel!
     
     @IBOutlet weak var typeLabel: UILabel!
     
     @IBOutlet weak var totalLabel: UILabel!
+
     
     var runnngNumber = ""
     var tempPrice = 0
@@ -76,10 +44,11 @@ class ViewController: UIViewController,
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = itemTable.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        let cell = itemTable.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! myCustomTableViewCell
 
-        cell.textLabel?.text = manager.getAllItems()[indexPath.row].name
-        cell.detailTextLabel?.text = "\(manager.getAllItems()[indexPath.row].quantity)"
+        cell.nameLabel?.text = manager.getAllItems()[indexPath.row].name
+        cell.QuanLabel?.text = "\(manager.getAllItems()[indexPath.row].quantity)"
+        cell.priceLabel?.text = "\(manager.getAllItems()[indexPath.row].price)"
 
         return cell
     }
