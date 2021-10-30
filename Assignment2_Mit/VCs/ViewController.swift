@@ -86,12 +86,17 @@ class ViewController: UIViewController,
             let alert = UIAlertController(title: "Are youu sure?", message: "Total cost for \(tempQuantity) \(typeLabel.text!) is $\(totalLabel.text!)", preferredStyle: .alert)
 
             alert.addAction(UIAlertAction(title: "Confirm", style: .default, handler: { [self]_ in
-                let temp = (manager.getAllItems()[currentIndex].quantity) - Int(runnngNumber)!
-                manager.addNewHistory(newHistory: History(n: "aa", q: 12, da: "sds", to: 22))
-                manager.getAllItems()[currentIndex].quantity = temp
-                //Date d = Date();
-                
-                itemTable.reloadData()
+                let date = Date()
+                                let dateFormatter = DateFormatter()
+                                dateFormatter.dateFormat = "YY, MMM d, HH:mm:ss"
+                                var currentDate = dateFormatter.string(from: date)
+                                manager.addNewHistory(newHistory: History(n: typeLabel.text!, q: quantityLabel.text!, da: currentDate, to: totalLabel.text!))
+                                
+                                let temp = (manager.getAllItems()[currentIndex].quantity) - Int(runnngNumber)!
+                                manager.getAllItems()[currentIndex].quantity = temp
+                                //Date d = Date();
+                                
+                                itemTable.reloadData()
             }))
             alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: {_ in self.itemTable.reloadData()}))
 

@@ -11,11 +11,11 @@ import UIKit
 class History {
     
     var name: String
-    var quantity: Int
+    var quantity: String
     var date: String
-    var total: Int
+    var total: String
     
-    init(n: String, q: Int, da: String, to: Int) {
+    init(n: String, q: String, da: String, to: String) {
         name = n
         quantity = q
         date = da

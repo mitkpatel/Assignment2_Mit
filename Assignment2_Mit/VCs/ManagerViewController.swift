@@ -22,8 +22,13 @@ class ManagerViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let managerView = segue.destination as? RestockViewController
-        managerView?.restockManager = myManager
+        if segue.identifier == "toHistoryItem" {
+                    let managerView = segue.destination as? HistoryItemViewController
+                    managerView?.historyItemManager = myManager
+                } else if segue.identifier == "toStockItem" {
+                    let managerView = segue.destination as? RestockViewController
+                    managerView?.restockManager = myManager
+                }
     }
 
     /*

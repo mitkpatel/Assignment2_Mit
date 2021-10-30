@@ -11,6 +11,11 @@ class HistoryItemViewController: UIViewController,UITableViewDelegate,
                                  UITableViewDataSource, UITextFieldDelegate {
 
     var historyItemManager: Manager = Manager();
+    var item = ""
+    var quantity = ""
+    var time = ""
+    var total = ""
+    var temp = ""
     
     @IBOutlet weak var itemTable: UITableView!
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -24,7 +29,7 @@ class HistoryItemViewController: UIViewController,UITableViewDelegate,
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = itemTable.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
 
-        print("hisss  \(historyItemManager.getAllHistory()[indexPath.row].quantity)")
+        
         cell.textLabel?.text = historyItemManager.getAllHistory()[indexPath.row].name
         cell.detailTextLabel?.text = "\(historyItemManager.getAllHistory()[indexPath.row].quantity)"
         
@@ -32,7 +37,12 @@ class HistoryItemViewController: UIViewController,UITableViewDelegate,
     }
     
      func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        item = historyItemManager.getAllHistory()[indexPath.row].name
+        quantity = "\(historyItemManager.getAllHistory()[indexPath.row].quantity)"
+        time = "\(historyItemManager.getAllHistory()[indexPath.row].date)"
+        total = "\(historyItemManager.getAllHistory()[indexPath.row].total)"
         
+       temp =  "\(item) \n \(quantity) \n \(time) \n \(total)"
      }
   
     
@@ -42,6 +52,20 @@ class HistoryItemViewController: UIViewController,UITableViewDelegate,
         // Do any additional setup after loading the view.
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "toDetailHistory" {
+            let managerView = segue.destination as? HistoryDetailsViewController
+        
+            print("temp \(temp)")
+            managerView?.history = temp
+        }
+        
+    }
 
     /*
     // MARK: - Navigation

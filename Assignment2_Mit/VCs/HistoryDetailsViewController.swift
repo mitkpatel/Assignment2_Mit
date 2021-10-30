@@ -9,9 +9,12 @@ import UIKit
 
 class HistoryDetailsViewController: UIViewController {
 
+    var history = ""
+    @IBOutlet weak var labelHistory: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        labelHistory.text = history
         // Do any additional setup after loading the view.
     }
     
